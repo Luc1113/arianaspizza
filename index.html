@@ -82,6 +82,60 @@
             background: linear-gradient(135deg, #ff5555 0%, #ff3333 100%);
         }
 
+        .gallery-section {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .gallery-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #ff4444;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+            text-shadow: 
+                0 0 10px rgba(255, 68, 68, 0.5),
+                0 0 20px rgba(255, 68, 68, 0.3);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 
+                0 0 20px rgba(255, 68, 68, 0.3),
+                0 0 40px rgba(255, 68, 68, 0.2),
+                0 8px 25px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 
+                0 0 25px rgba(255, 68, 68, 0.5),
+                0 0 50px rgba(255, 68, 68, 0.3),
+                0 12px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
         .info-section {
             max-width: 1200px;
             margin: 0 auto;
@@ -214,6 +268,14 @@
             .info-section {
                 grid-template-columns: 1fr;
             }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-title {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
@@ -225,6 +287,18 @@
 
     <div class="hero center-text">
         <a href="https://arianaspizza.avcoindustries.com/order-now" class="cta-button">ORDER NOW</a>
+    </div>
+
+    <div class="gallery-section">
+        <h2 class="gallery-title">OUR DELICIOUS PIZZA</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://d1w7312wesee68.cloudfront.net/XzdB7whZNtJ96JIDkpfd_0HJugcvexDhnR9cA0jtXDE/ext:webp/quality:85/c:2048:1365:ce:0:0/plain/s3://toast-sites-resources-prod/restaurantImages/88907444-2258-489c-b516-8f63b4cccfdb/ariqanaspizzav2.jpg" alt="Ariana's Pizza Interior">
+            </div>
+            <div class="gallery-item">
+                <img src="https://d1w7312wesee68.cloudfront.net/qI8GOyjh981gzvyo90ka-ZzkPVjt8pO1wgJunaDcpIA/ext:webp/quality:85/c:1823:1365:ce:76:0/plain/s3://toast-sites-resources-prod/restaurantImages/88907444-2258-489c-b516-8f63b4cccfdb/PIZZA2.jpg" alt="Fresh Pizza">
+            </div>
+        </div>
     </div>
 
     <div class="info-section">
